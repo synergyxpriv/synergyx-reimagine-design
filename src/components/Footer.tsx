@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -17,9 +18,18 @@ const Footer = () => {
               and comprehensive digital transformation services. Your success is our mission.
             </p>
             <div className="space-y-2 text-gray-300">
-              <p>📧 info@synergyxservices.com</p>
-              <p>📞 (555) 123-4567</p>
-              <p>📍 123 Business Ave, Tech City, TC 12345</p>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <span>info@synergyxservices.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <span>(555) 123-4567</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>123 Business Ave, Tech City, TC 12345</span>
+              </div>
             </div>
           </div>
 
@@ -30,6 +40,7 @@ const Footer = () => {
               <li><Link to="/" className="text-gray-300 hover:text-blue-400 transition-colors">Home</Link></li>
               <li><Link to="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
               <li><Link to="/services" className="text-gray-300 hover:text-blue-400 transition-colors">Services</Link></li>
+              <li><Link to="/ventures" className="text-gray-300 hover:text-blue-400 transition-colors">Ventures</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
