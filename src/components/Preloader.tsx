@@ -20,19 +20,25 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 flex items-center justify-center z-50">
       <div className="text-center">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">SynergyX</h1>
-          <p className="text-blue-200">Loading Excellence...</p>
+        <div className="mb-12">
+          <img 
+            src="/lovable-uploads/3296a7e4-ee25-44e9-8203-51ffdd9272f4.png" 
+            alt="SynergyX Services" 
+            className="h-16 mx-auto mb-4 animate-pulse"
+          />
+          <h1 className="text-3xl font-bold text-white mb-2">SynergyX Services</h1>
+          <p className="text-purple-200 font-light">Loading Excellence...</p>
         </div>
-        <div className="w-64 h-1 bg-blue-800 rounded-full overflow-hidden">
+        
+        <div className="w-80 h-2 bg-purple-800/30 rounded-full overflow-hidden backdrop-blur-sm">
           <div 
-            className="h-full bg-gradient-to-r from-blue-400 to-purple-400 rounded-full transition-all duration-300"
+            className="h-full bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 rounded-full transition-all duration-300 shadow-lg shadow-purple-500/30"
             style={{ width: `${progress}%` }}
           />
         </div>
-        <div className="mt-4 text-blue-200 text-sm">{progress}%</div>
+        <div className="mt-6 text-purple-200 text-sm font-medium">{progress}%</div>
       </div>
     </div>
   );
