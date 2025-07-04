@@ -3,9 +3,16 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Counter from './Counter';
+import TextRotator from './TextRotator';
 
 const Hero = () => {
+  const rotatingTexts = [
+    "Digital Excellence",
+    "Innovation Solutions", 
+    "Strategic Growth",
+    "Technology Leadership"
+  ];
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background */}
@@ -38,8 +45,8 @@ const Hero = () => {
           
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 animate-fade-in leading-tight">
             Transform Your Business
-            <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mt-2">
-              Digital Excellence
+            <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mt-2 min-h-[1.2em]">
+              <TextRotator texts={rotatingTexts} />
             </span>
           </h1>
           
@@ -55,33 +62,12 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 group">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 hover:border-white/70 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 group">
               <Link to="/contact" className="flex items-center justify-center gap-2">
                 <Play className="w-5 h-5" />
                 Free Consultation
               </Link>
             </Button>
-          </div>
-
-          <div className="mt-12 sm:mt-20 animate-fade-in px-4" style={{animationDelay: '0.6s'}}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 text-white/60 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-white">
-                  <Counter end={500} suffix="+" />
-                </div>
-                <div className="text-xs sm:text-sm uppercase tracking-wider mt-1">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-white">
-                  <Counter end={98} suffix="%" />
-                </div>
-                <div className="text-xs sm:text-sm uppercase tracking-wider mt-1">Client Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-white">24/7</div>
-                <div className="text-xs sm:text-sm uppercase tracking-wider mt-1">Support Available</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

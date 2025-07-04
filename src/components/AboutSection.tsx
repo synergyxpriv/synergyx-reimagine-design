@@ -1,13 +1,18 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import Counter from './Counter';
 
 const AboutSection = () => {
   const stats = [
-    { number: "500+", label: "Projects Completed" },
     { number: "150+", label: "Happy Clients" },
-    { number: "10+", label: "Years Experience" },
-    { number: "24/7", label: "Support Available" }
+    { number: "10+", label: "Years Experience" }
+  ];
+
+  const counterStats = [
+    { end: 500, suffix: "+", label: "Projects Completed" },
+    { end: 98, suffix: "%", label: "Client Satisfaction" },
+    { label: "24/7", staticValue: "24/7", description: "Support Available" }
   ];
 
   return (
@@ -53,6 +58,26 @@ const AboutSection = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Counter Statistics Section */}
+        <div className="mt-16 pt-16 border-t border-gray-200">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+            {counterStats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                  {stat.staticValue ? (
+                    stat.staticValue
+                  ) : (
+                    <Counter end={stat.end!} suffix={stat.suffix} />
+                  )}
+                </div>
+                <div className="text-sm sm:text-base text-gray-600 uppercase tracking-wider">
+                  {stat.description || stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
