@@ -30,9 +30,9 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
       
       <div className="text-center animate-fade-in relative z-10">
         <div className="mb-12">
-          <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-2xl flex items-center justify-center shadow-2xl">
-            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-              <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-md"></div>
+          <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-2xl border border-purple-400/30">
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl flex items-center justify-center">
+              <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-md animate-pulse"></div>
             </div>
           </div>
           
@@ -43,16 +43,16 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         </div>
         
         <div className="w-80 max-w-sm mx-auto">
-          <div className="h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm border border-white/20 shadow-lg">
+          <div className="h-3 bg-purple-900/40 rounded-full overflow-hidden backdrop-blur-sm border border-purple-400/30 shadow-lg">
             <div 
-              className="h-full bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 rounded-full transition-all duration-300 ease-out shadow-lg"
+              className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 rounded-full transition-all duration-300 ease-out shadow-lg animate-pulse"
               style={{ 
                 width: `${progress}%`,
-                boxShadow: '0 0 20px rgba(168, 85, 247, 0.4)'
+                boxShadow: '0 0 20px rgba(168, 85, 247, 0.6)'
               }}
             />
           </div>
-          <div className="mt-6 text-white text-lg font-medium tracking-wide">
+          <div className="mt-6 text-purple-100 text-lg font-medium tracking-wide">
             {Math.round(progress)}%
           </div>
         </div>

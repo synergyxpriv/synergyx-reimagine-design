@@ -9,6 +9,7 @@ import Testimonials from '@/components/Testimonials';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import Preloader from '@/components/Preloader';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,6 +32,7 @@ const Index = () => {
       <Testimonials />
       <ContactCTA />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

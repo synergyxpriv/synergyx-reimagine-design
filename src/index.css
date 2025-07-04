@@ -104,6 +104,33 @@ All colors MUST be HSL.
   }
 }
 
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(168, 85, 247, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.8), rgba(99, 102, 241, 0.8));
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 1), rgba(99, 102, 241, 1));
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+}
+
+/* Firefox scrollbar styles */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 85, 247, 0.8) rgba(168, 85, 247, 0.1);
+}
+
 /* Custom animations */
 @keyframes fade-in {
   from {
@@ -178,6 +205,6 @@ All colors MUST be HSL.
 /* Loading state for smooth transitions */
 .loading-transition {
   opacity: 0.7;
-  pointer-events: none;
+  pointer-events-none;
   transition: opacity 0.2s ease-in-out;
 }
