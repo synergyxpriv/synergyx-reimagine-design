@@ -28,14 +28,14 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-50 p-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-purple-400/30 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+      className={`fixed right-6 bottom-24 z-50 p-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-purple-400/30 ${
+        isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
       }`}
       style={{
-        boxShadow: '0 8px 32px rgba(168, 85, 247, 0.3)'
+        boxShadow: '0 4px 20px rgba(168, 85, 247, 0.3)'
       }}
     >
-      <ChevronUp size={24} />
+      <ChevronUp size={20} />
     </button>
   );
 };
