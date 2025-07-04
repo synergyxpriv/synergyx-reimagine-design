@@ -205,6 +205,6 @@ html {
 /* Loading state for smooth transitions */
 .loading-transition {
   opacity: 0.7;
-  pointer-events-none;
+  pointer-events: none;
   transition: opacity 0.2s ease-in-out;
 }
