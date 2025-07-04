@@ -33,36 +33,27 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Logo */}
-          <div className="mb-6 sm:mb-8 animate-fade-in">
-            <img 
-              src="/lovable-uploads/3296a7e4-ee25-44e9-8203-51ffdd9272f4.png" 
-              alt="SynergyX Services" 
-              className="h-16 sm:h-20 mx-auto mb-4"
-            />
-          </div>
-          
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 animate-fade-in leading-tight">
+        <div className="text-center max-w-5xl mx-auto">          
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 animate-fade-in leading-tight">
             Transform Your Business
             <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mt-2 min-h-[1.2em]">
-              <TextRotator texts={rotatingTexts} />
+              <TextRotator texts={rotatingTexts} interval={3000} />
             </span>
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 sm:mb-12 leading-relaxed animate-fade-in max-w-4xl mx-auto font-light px-4" style={{animationDelay: '0.2s'}}>
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed animate-fade-in max-w-3xl mx-auto font-light px-4" style={{animationDelay: '0.2s'}}>
             Empowering enterprises through cutting-edge technology, strategic innovation, 
             and comprehensive digital transformation services that drive measurable results.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in px-4" style={{animationDelay: '0.4s'}}>
-            <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group">
+            <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group font-semibold">
               <Link to="/services" className="flex items-center justify-center gap-2">
                 Explore Our Services
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-white/50 text-white bg-white/10 hover:bg-white/20 hover:border-white/70 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 group">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-white/70 text-white bg-white/10 hover:bg-white/20 hover:border-white/90 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 group font-semibold">
               <Link to="/contact" className="flex items-center justify-center gap-2">
                 <Play className="w-5 h-5" />
                 Free Consultation

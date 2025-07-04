@@ -9,7 +9,7 @@ interface TextRotatorProps {
 
 const TextRotator: React.FC<TextRotatorProps> = ({ 
   texts, 
-  interval = 5000, 
+  interval = 4000, 
   className = '' 
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,7 +22,7 @@ const TextRotator: React.FC<TextRotatorProps> = ({
       setTimeout(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
         setIsVisible(true);
-      }, 300);
+      }, 500);
     }, interval);
 
     return () => clearInterval(timer);
@@ -30,7 +30,11 @@ const TextRotator: React.FC<TextRotatorProps> = ({
 
   return (
     <span 
-      className={`transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'} ${className}`}
+      className={`transition-all duration-500 ease-in-out transform ${
+        isVisible 
+          ? 'opacity-100 translate-y-0' 
+          : 'opacity-0 translate-y-2'
+      } ${className}`}
     >
       {texts[currentIndex]}
     </span>
