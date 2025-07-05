@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Rocket, Cloud, Brain, Briefcase, BarChart3, Shield, CheckCircle, ArrowRight } from 'lucide-react';
+import { Rocket, Cloud, Brain, Briefcase, BarChart3, Shield, ArrowRight } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -21,12 +21,6 @@ const Services = () => {
         "Change Management Support",
         "Technology Roadmap Planning",
         "Digital Culture Transformation"
-      ],
-      benefits: [
-        "Reduced operational costs by 30-50%",
-        "Improved customer satisfaction",
-        "Streamlined business processes",
-        "Enhanced competitive advantage"
       ]
     },
     {
@@ -41,12 +35,6 @@ const Services = () => {
         "Cloud Security Implementation",
         "Cost Optimization",
         "24/7 Monitoring & Support"
-      ],
-      benefits: [
-        "40% reduction in infrastructure costs",
-        "99.9% uptime guarantee",
-        "Scalable on-demand resources",
-        "Enhanced security and compliance"
       ]
     },
     {
@@ -61,12 +49,6 @@ const Services = () => {
         "Predictive Analytics",
         "Process Automation",
         "AI Strategy Consulting"
-      ],
-      benefits: [
-        "60% faster decision-making",
-        "Automated routine tasks",
-        "Predictive business insights",
-        "Enhanced customer experiences"
       ]
     },
     {
@@ -81,12 +63,6 @@ const Services = () => {
         "Technology Assessment",
         "Risk Management",
         "Performance Optimization"
-      ],
-      benefits: [
-        "Improved operational efficiency",
-        "Strategic technology alignment",
-        "Reduced business risks",
-        "Accelerated growth trajectory"
       ]
     },
     {
@@ -101,12 +77,6 @@ const Services = () => {
         "Real-time Dashboards",
         "Predictive Modeling",
         "Data Governance"
-      ],
-      benefits: [
-        "Data-driven decision making",
-        "Real-time business insights",
-        "Improved forecasting accuracy",
-        "Competitive market advantage"
       ]
     },
     {
@@ -121,12 +91,6 @@ const Services = () => {
         "Security Training",
         "Incident Response Planning",
         "Continuous Monitoring"
-      ],
-      benefits: [
-        "99.9% threat detection rate",
-        "Full regulatory compliance",
-        "Reduced security incidents",
-        "Protected business reputation"
       ]
     }
   ];
@@ -159,67 +123,43 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="space-y-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}>
-                  <div className={`transform transition-all duration-700 hover:scale-105 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    <Card className="h-full border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group bg-white/80 backdrop-blur-sm">
-                      <CardHeader className="pb-4">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                          <IconComponent className="w-8 h-8 text-white" />
-                        </div>
-                        <CardTitle className="text-2xl lg:text-3xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
-                          {service.title}
-                        </CardTitle>
-                        <CardDescription className="text-base lg:text-lg text-gray-600 leading-relaxed">
-                          {service.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="mb-6">
-                          <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features:</h4>
-                          <ul className="space-y-3">
-                            {service.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-center text-gray-700">
-                                <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient} mr-3 flex-shrink-0`}></div>
-                                <span className="font-medium">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                <Card key={index} className="h-full border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group bg-white/80 backdrop-blur-sm hover:-translate-y-2">
+                  <CardHeader className="pb-4">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="text-2xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-base text-gray-600 leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features:</h4>
+                      <ul className="space-y-3">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-gray-700">
+                            <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient} mr-3 flex-shrink-0`}></div>
+                            <span className="font-medium">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                        <Button className={`bg-gradient-to-r ${service.gradient} hover:shadow-lg transition-all duration-300 group/btn`}>
-                          <Link to="/contact" className="flex items-center gap-2">
-                            Learn More
-                            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                          </Link>
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </div>
-
-                  <div className={`transform transition-all duration-700 hover:scale-105 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                    <Card className={`h-full border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group bg-gradient-to-br from-gray-50 to-white`}>
-                      <CardContent className="p-6 lg:p-8">
-                        <h4 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6 group-hover:text-purple-700 transition-colors duration-300">
-                          Benefits & Results
-                        </h4>
-                        <ul className="space-y-4">
-                          {service.benefits.map((benefit, idx) => (
-                            <li key={idx} className="flex items-start group/item">
-                              <CheckCircle className="text-green-500 w-6 h-6 mr-3 mt-0.5 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-300" />
-                              <span className="text-gray-700 text-base lg:text-lg leading-relaxed">{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
+                    <Button className={`bg-gradient-to-r ${service.gradient} hover:shadow-lg transition-all duration-300 group/btn`}>
+                      <Link to="/explore-our-work" className="flex items-center gap-2">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
               );
             })}
           </div>

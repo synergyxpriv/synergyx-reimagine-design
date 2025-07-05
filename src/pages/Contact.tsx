@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -30,22 +31,22 @@ const Contact = () => {
     {
       title: "Phone",
       value: "(555) 123-4567",
-      icon: "📞"
+      icon: Phone
     },
     {
       title: "Email",
       value: "info@synergyxservices.com",
-      icon: "📧"
+      icon: Mail
     },
     {
       title: "Address",
       value: "123 Business Ave, Tech City, TC 12345",
-      icon: "📍"
+      icon: MapPin
     },
     {
       title: "Business Hours",
       value: "Mon-Fri: 9AM-6PM EST",
-      icon: "🕒"
+      icon: Clock
     }
   ];
 
@@ -149,15 +150,20 @@ const Contact = () => {
                   <p className="text-gray-600">Reach out to us through any of these channels.</p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="text-2xl">{info.icon}</div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900">{info.title}</h4>
-                        <p className="text-gray-600">{info.value}</p>
+                  {contactInfo.map((info, index) => {
+                    const IconComponent = info.icon;
+                    return (
+                      <div key={index} className="flex items-start space-x-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">{info.title}</h4>
+                          <p className="text-gray-600">{info.value}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </CardContent>
               </Card>
 
@@ -183,23 +189,6 @@ const Contact = () => {
                   </p>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section Placeholder */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Visit Our Office</h2>
-            <p className="text-lg text-gray-600">Located in the heart of Tech City's business district</p>
-          </div>
-          <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🗺️</div>
-              <p className="text-gray-600">Interactive map coming soon</p>
-              <p className="text-sm text-gray-500 mt-2">123 Business Ave, Tech City, TC 12345</p>
             </div>
           </div>
         </div>
