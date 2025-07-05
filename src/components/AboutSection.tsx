@@ -49,13 +49,35 @@ const AboutSection = () => {
 
           <div className="relative">
             <div className="bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8 h-96 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">🎯</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  To empower businesses with innovative technology solutions that drive 
-                  sustainable growth and competitive advantage in the digital age.
-                </p>
+              <div className="grid grid-cols-2 gap-8 w-full max-w-sm">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                    <div className="text-2xl">🎯</div>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Mission</h4>
+                  <p className="text-sm text-gray-600">Drive innovation</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                    <div className="text-2xl">👁️</div>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Vision</h4>
+                  <p className="text-sm text-gray-600">Future focused</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                    <div className="text-2xl">⭐</div>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Excellence</h4>
+                  <p className="text-sm text-gray-600">Quality first</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
+                    <div className="text-2xl">🤝</div>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Partnership</h4>
+                  <p className="text-sm text-gray-600">Together we grow</p>
+                </div>
               </div>
             </div>
           </div>

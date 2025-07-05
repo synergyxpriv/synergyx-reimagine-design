@@ -10,7 +10,7 @@ import Testimonials from '@/components/Testimonials';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import Preloader from '@/components/Preloader';
-import ScrollToTop from '@/components/ScrollToTop';
+import IconScroller from '@/components/IconScroller';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,13 +43,12 @@ const Index = () => {
         <ServicesOverview />
         <AboutSection />
         <BrandScroller />
+        <IconScroller />
         <VenturesPreview />
         <Testimonials />
         <ContactCTA />
         <Footer />
       </div>
-      
-      <ScrollToTop />
     </div>
   );
 };

@@ -3,6 +3,16 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { 
+  Lightbulb, 
+  Star, 
+  Handshake, 
+  Target,
+  Linkedin,
+  Twitter,
+  Github,
+  Mail
+} from 'lucide-react';
 
 const About = () => {
   const teamMembers = [
@@ -36,22 +46,22 @@ const About = () => {
     {
       title: "Innovation",
       description: "We stay at the forefront of technology to deliver cutting-edge solutions that give our clients a competitive advantage.",
-      icon: "💡"
+      icon: Lightbulb
     },
     {
       title: "Excellence",
       description: "We maintain the highest standards in everything we do, ensuring quality outcomes that exceed expectations.",
-      icon: "⭐"
+      icon: Star
     },
     {
       title: "Partnership",
       description: "We work as an extension of your team, building long-term relationships based on trust and mutual success.",
-      icon: "🤝"
+      icon: Handshake
     },
     {
       title: "Results",
       description: "We focus on delivering measurable outcomes that drive real business value and sustainable growth.",
-      icon: "🎯"
+      icon: Target
     }
   ];
 
@@ -109,23 +119,13 @@ const About = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto mb-16">
-            <Card className="border-0 shadow-lg">
-              <CardContent className="p-12 text-center">
-                <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  To empower businesses with innovative technology solutions that drive sustainable growth, 
-                  operational excellence, and competitive advantage in an increasingly digital world.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                 <CardHeader>
-                  <div className="text-4xl mb-4">{value.icon}</div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon size={32} className="text-white" />
+                  </div>
                   <CardTitle className="text-xl font-bold text-gray-900">{value.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -160,6 +160,23 @@ const About = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
                       <p className="text-blue-600 font-medium mb-3">{member.title}</p>
+                      
+                      {/* Social Platform Icons */}
+                      <div className="flex space-x-3 mb-4">
+                        <button className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 transition-colors duration-200">
+                          <Linkedin size={16} className="text-blue-600" />
+                        </button>
+                        <button className="p-2 rounded-full bg-gray-100 hover:bg-blue-100 transition-colors duration-200">
+                          <Twitter size={16} className="text-blue-400" />
+                        </button>
+                        <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200">
+                          <Github size={16} className="text-gray-700" />
+                        </button>
+                        <button className="p-2 rounded-full bg-gray-100 hover:bg-red-100 transition-colors duration-200">
+                          <Mail size={16} className="text-red-500" />
+                        </button>
+                      </div>
+                      
                       <p className="text-gray-600 mb-4 leading-relaxed">{member.bio}</p>
                       <div className="flex flex-wrap gap-2">
                         {member.expertise.map((skill, idx) => (
