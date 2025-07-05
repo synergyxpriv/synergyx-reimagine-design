@@ -15,98 +15,83 @@ import {
   ArrowRight,
   ExternalLink,
   Calendar,
-  Award
+  GraduationCap,
+  ShoppingBag,
+  Camera
 } from 'lucide-react';
 
 const Ventures = () => {
   const ventures = [
     {
-      title: "TechFlow Solutions",
-      description: "Revolutionary workflow automation platform that transforms how businesses manage their operations through intelligent process optimization.",
-      category: "SaaS Platform",
+      title: "SynergyX Academy",
+      description: "Comprehensive educational platform offering cutting-edge technology courses and professional development programs for the next generation of innovators.",
+      category: "Education Platform",
       status: "Active",
       year: "2023",
       image: "/lovable-uploads/3296a7e4-ee25-44e9-8203-51ffdd9272f4.png",
       metrics: {
-        users: "10K+",
-        growth: "300%",
-        funding: "$2.5M"
+        students: "15K+",
+        courses: "150+",
+        instructors: "200+"
       },
       gradient: "from-purple-600 to-indigo-600",
       features: [
-        "AI-powered automation",
-        "Real-time analytics",
-        "Enterprise integration",
-        "Custom workflows"
-      ]
+        "Interactive learning modules",
+        "Industry expert instructors",
+        "Career placement support",
+        "Certification programs"
+      ],
+      icon: GraduationCap
     },
     {
-      title: "DataVault Analytics",
-      description: "Advanced data intelligence platform providing real-time insights and predictive analytics for enterprise decision-making.",
-      category: "Analytics Platform",
+      title: "SynX Digital Store",
+      description: "Revolutionary e-commerce platform providing seamless digital marketplace experience with advanced analytics and customer engagement tools.",
+      category: "E-commerce Platform",
       status: "Growing",
       year: "2022",
       image: "/lovable-uploads/3296a7e4-ee25-44e9-8203-51ffdd9272f4.png",
       metrics: {
-        users: "5K+",
-        growth: "250%",
-        funding: "$1.8M"
+        merchants: "5K+",
+        products: "100K+",
+        transactions: "$50M+"
       },
       gradient: "from-indigo-600 to-blue-600",
       features: [
-        "Predictive modeling",
-        "Real-time dashboards",
-        "Machine learning insights",
-        "Custom reporting"
-      ]
+        "Multi-vendor marketplace",
+        "Advanced analytics dashboard",
+        "Mobile-first design",
+        "Secure payment gateway"
+      ],
+      icon: ShoppingBag
     },
     {
-      title: "CloudSecure Pro",
-      description: "Next-generation cybersecurity solution offering comprehensive protection for cloud infrastructure and enterprise applications.",
-      category: "Cybersecurity",
+      title: "SynX Media House",
+      description: "Creative digital media agency specializing in brand storytelling, content creation, and innovative marketing campaigns for global brands.",
+      category: "Digital Media",
       status: "Expanding",
       year: "2024",
       image: "/lovable-uploads/3296a7e4-ee25-44e9-8203-51ffdd9272f4.png",
       metrics: {
-        users: "3K+",
-        growth: "400%",
-        funding: "$3.2M"
+        clients: "200+",
+        campaigns: "500+",
+        reach: "10M+"
       },
       gradient: "from-blue-600 to-cyan-600",
       features: [
-        "Zero-trust architecture",
-        "24/7 threat monitoring",
-        "Compliance automation",
-        "Incident response"
-      ]
-    },
-    {
-      title: "InnovateLab",
-      description: "R&D incubator fostering breakthrough technologies in AI, blockchain, and quantum computing for next-generation solutions.",
-      category: "R&D Incubator",
-      status: "Research",
-      year: "2024",
-      image: "/lovable-uploads/3296a7e4-ee25-44e9-8203-51ffdd9272f4.png",
-      metrics: {
-        projects: "15+",
-        patents: "8",
-        funding: "$5M"
-      },
-      gradient: "from-cyan-600 to-teal-600",
-      features: [
-        "Quantum computing research",
-        "AI/ML innovation",
-        "Blockchain development",
-        "Patent portfolio"
-      ]
+        "Brand strategy development",
+        "Creative content production",
+        "Digital marketing campaigns",
+        "Social media management"
+      ],
+      icon: Camera
     }
   ];
 
   const stats = [
-    { label: "Total Ventures", value: "12+", icon: Rocket },
-    { label: "Combined Users", value: "50K+", icon: Users },
-    { label: "Total Funding", value: "$25M+", icon: TrendingUp },
-    { label: "Global Reach", value: "30+ Countries", icon: Globe }
+    { label: "Total Ventures", value: "3", icon: Rocket },
+    { label: "Combined Users", value: "25K+", icon: Users },
+    { label: "Total Revenue", value: "$75M+", icon: TrendingUp },
+    { label: "Global Reach", value: "50+ Countries", icon: Globe }
   ];
 
   return (
@@ -168,77 +153,84 @@ const Ventures = () => {
               Portfolio <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Ventures</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explore our diverse portfolio of innovative ventures across technology, analytics, and emerging sectors.
+              Explore our diverse portfolio of innovative ventures across education, e-commerce, and digital media sectors.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {ventures.map((venture, index) => (
-              <Card key={index} className="h-full border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group bg-white/90 backdrop-blur-sm overflow-hidden">
-                <div className={`h-2 bg-gradient-to-r ${venture.gradient}`}></div>
-                
-                <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${venture.gradient} text-white`}>
-                      {venture.status}
-                    </div>
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {venture.year}
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            {ventures.map((venture, index) => {
+              const IconComponent = venture.icon;
+              return (
+                <Card key={index} className="h-full border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group bg-white/90 backdrop-blur-sm overflow-hidden">
+                  <div className={`h-2 bg-gradient-to-r ${venture.gradient}`}></div>
                   
-                  <CardTitle className="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
-                    {venture.title}
-                  </CardTitle>
-                  
-                  <div className="text-sm text-purple-600 font-medium mb-2">
-                    {venture.category}
-                  </div>
-                  
-                  <CardDescription className="text-base text-gray-600 leading-relaxed">
-                    {venture.description}
-                  </CardDescription>
-                </CardHeader>
-
-                <CardContent>
-                  {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-50 rounded-xl">
-                    {Object.entries(venture.metrics).map(([key, value], idx) => (
-                      <div key={idx} className="text-center">
-                        <div className="text-lg font-bold text-gray-900">{value}</div>
-                        <div className="text-xs text-gray-500 capitalize">{key}</div>
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${venture.gradient} text-white`}>
+                        {venture.status}
                       </div>
-                    ))}
-                  </div>
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {venture.year}
+                      </div>
+                    </div>
 
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      {venture.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-700">
-                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${venture.gradient} mr-2 flex-shrink-0`}></div>
-                          <span>{feature}</span>
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${venture.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    
+                    <CardTitle className="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
+                      {venture.title}
+                    </CardTitle>
+                    
+                    <div className="text-sm text-purple-600 font-medium mb-2">
+                      {venture.category}
+                    </div>
+                    
+                    <CardDescription className="text-base text-gray-600 leading-relaxed">
+                      {venture.description}
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent>
+                    {/* Metrics */}
+                    <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-50 rounded-xl">
+                      {Object.entries(venture.metrics).map(([key, value], idx) => (
+                        <div key={idx} className="text-center">
+                          <div className="text-lg font-bold text-gray-900">{value}</div>
+                          <div className="text-xs text-gray-500 capitalize">{key}</div>
                         </div>
                       ))}
                     </div>
-                  </div>
 
-                  <div className="flex gap-3">
-                    <Button className={`flex-1 bg-gradient-to-r ${venture.gradient} hover:shadow-lg transition-all duration-300 group/btn`}>
-                      <Link to="/contact" className="flex items-center justify-center gap-2">
-                        Learn More
-                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                      </Link>
-                    </Button>
-                    <Button variant="outline" size="icon" className="hover:bg-gray-50">
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    {/* Features */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
+                      <div className="grid grid-cols-1 gap-2">
+                        {venture.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-gray-700">
+                            <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${venture.gradient} mr-2 flex-shrink-0`}></div>
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <Button className={`flex-1 bg-gradient-to-r ${venture.gradient} hover:shadow-lg transition-all duration-300 group/btn`}>
+                        <Link to="/contact" className="flex items-center justify-center gap-2">
+                          Learn More
+                          <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                        </Link>
+                      </Button>
+                      <Button variant="outline" size="icon" className="hover:bg-gray-50">
+                        <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>

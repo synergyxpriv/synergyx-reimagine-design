@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const ExploreOurWork = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
   const projects = [
     {
       category: "Digital Transformation",
@@ -53,6 +55,12 @@ const ExploreOurWork = () => {
     }
   ];
 
+  const categories = ['All', 'Digital Transformation', 'Cloud Solutions', 'AI Integration', 'Business Consulting', 'Data Analytics', 'Cybersecurity'];
+
+  const filteredProjects = activeFilter === 'All' 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -71,7 +79,7 @@ const ExploreOurWork = () => {
             Discover the innovative solutions we've delivered for our clients across various industries and technologies.
           </p>
           <div className="mt-8">
-            <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50">
+            <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white">
               <Link to="/services" className="flex items-center gap-2">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Services
@@ -81,11 +89,33 @@ const ExploreOurWork = () => {
         </div>
       </section>
 
+      {/* Filter Section */}
+      <section className="py-8 bg-gray-50 border-b">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={activeFilter === category ? "default" : "outline"}
+                className={`rounded-full px-6 py-2 transition-all duration-300 ${
+                  activeFilter === category
+                    ? 'bg-purple-600 text-white hover:bg-purple-700'
+                    : 'border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300'
+                }`}
+                onClick={() => setActiveFilter(category)}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projects Grid */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <Card key={index} className="group hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-white overflow-hidden">
                 <div className="relative overflow-hidden">
                   <img 
