@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import ServicesOverview from '@/components/ServicesOverview';
 import AboutSection from '@/components/AboutSection';
+import BrandScroller from '@/components/BrandScroller';
 import VenturesPreview from '@/components/VenturesPreview';
 import Testimonials from '@/components/Testimonials';
 import ContactCTA from '@/components/ContactCTA';
@@ -41,6 +42,7 @@ const Index = () => {
         <Hero />
         <ServicesOverview />
         <AboutSection />
+        <BrandScroller />
         <VenturesPreview />
         <Testimonials />
         <ContactCTA />

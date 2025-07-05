@@ -7,7 +7,8 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      // Show button when user scrolls down 100px instead of 300px
+      if (window.pageYOffset > 100) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -28,7 +29,7 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed right-6 bottom-24 z-50 p-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-purple-400/30 ${
+      className={`fixed right-6 bottom-6 z-50 p-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-purple-400/30 ${
         isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
       }`}
       style={{

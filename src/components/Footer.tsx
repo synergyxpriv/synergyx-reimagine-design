@@ -4,6 +4,18 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
+  const handleServiceClick = (service: string) => {
+    // Scroll to services section on home page or navigate to services page
+    if (window.location.pathname === '/') {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = '/services';
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-6 py-12">
@@ -49,11 +61,46 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li><span className="text-gray-300">Digital Transformation</span></li>
-              <li><span className="text-gray-300">Cloud Solutions</span></li>
-              <li><span className="text-gray-300">AI Integration</span></li>
-              <li><span className="text-gray-300">Business Consulting</span></li>
-              <li><span className="text-gray-300">Data Analytics</span></li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('Digital Transformation')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors text-left"
+                >
+                  Digital Transformation
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('Cloud Solutions')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors text-left"
+                >
+                  Cloud Solutions
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('AI Integration')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors text-left"
+                >
+                  AI Integration
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('Business Consulting')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors text-left"
+                >
+                  Business Consulting
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleServiceClick('Data Analytics')}
+                  className="text-gray-300 hover:text-blue-400 transition-colors text-left"
+                >
+                  Data Analytics
+                </button>
+              </li>
             </ul>
           </div>
         </div>

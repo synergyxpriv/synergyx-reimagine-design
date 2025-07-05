@@ -163,6 +163,15 @@ html {
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .animate-fade-in {
   animation: fade-in 0.4s ease-out forwards;
   opacity: 0;
@@ -175,6 +184,10 @@ html {
 .animate-slide-in {
   animation: slide-in 0.5s ease-out forwards;
   opacity: 0;
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
 }
 
 /* Smooth page transitions */
