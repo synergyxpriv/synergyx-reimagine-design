@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -13,39 +13,8 @@ const Hero = () => {
     "Technology Leadership"
   ];
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const gradientElements = document.querySelectorAll('.bg-gradient-to-br');
-      
-      gradientElements.forEach((element) => {
-        const rect = element.getBoundingClientRect();
-        const isHovering = (
-          e.clientX >= rect.left &&
-          e.clientX <= rect.right &&
-          e.clientY >= rect.top &&
-          e.clientY <= rect.bottom
-        );
-        
-        if (isHovering) {
-          const pseudo = element as HTMLElement;
-          pseudo.style.setProperty('--cursor-x', `${e.clientX}px`);
-          pseudo.style.setProperty('--cursor-y', `${e.clientY}px`);
-        }
-      });
-    };
-
-    // Only add listener on desktop
-    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      document.addEventListener('mousemove', handleMouseMove);
-      
-      return () => {
-        document.removeEventListener('mousemove', handleMouseMove);
-      };
-    }
-  }, []);
-
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden cursor-glow">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
         <div className="absolute inset-0 bg-black/10"></div>
@@ -93,19 +62,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Custom cursor glow */}
-      <div 
-        className="fixed pointer-events-none z-50 w-5 h-5 rounded-full opacity-0 transition-opacity duration-300"
-        style={{
-          background: 'radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, rgba(168, 85, 247, 0.4) 30%, transparent 70%)',
-          boxShadow: '0 0 20px rgba(168, 85, 247, 0.6), 0 0 40px rgba(99, 102, 241, 0.4)',
-          left: 'var(--cursor-x, -100px)',
-          top: 'var(--cursor-y, -100px)',
-          transform: 'translate(-50%, -50%)'
-        }}
-        id="cursor-glow"
-      />
     </section>
   );
 };

@@ -104,30 +104,6 @@ All colors MUST be HSL.
   }
 }
 
-/* Cursor glow effect for gradient backgrounds */
-.bg-gradient-to-br {
-  cursor: none;
-  position: relative;
-}
-
-.bg-gradient-to-br::before {
-  content: '';
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, rgba(168, 85, 247, 0.4) 30%, transparent 70%);
-  pointer-events: none;
-  z-index: 9999;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6), 0 0 40px rgba(99, 102, 241, 0.4);
-}
-
-.bg-gradient-to-br:hover::before {
-  opacity: 1;
-}
-
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 8px;
@@ -237,15 +213,6 @@ html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
-  
-  /* Disable cursor glow on mobile */
-  .bg-gradient-to-br {
-    cursor: default;
-  }
-  
-  .bg-gradient-to-br::before {
-    display: none;
-  }
 }
 
 /* Loading state for smooth transitions */
@@ -253,11 +220,4 @@ html {
   opacity: 0.7;
   pointer-events: none;
   transition: opacity 0.2s ease-in-out;
-}
-
-/* JavaScript will handle cursor position */
-@media (hover: hover) and (pointer: fine) {
-  .cursor-glow {
-    cursor: none;
-  }
 }
