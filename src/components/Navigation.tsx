@@ -37,7 +37,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/3296a7e4-ee25-44e9-8203-51ffdd9272f4.png" 
-              alt="SynergyX Services" 
+              alt="SynergyX" 
               className="h-8 sm:h-10 w-auto"
             />
             <span className={`text-xl sm:text-2xl font-bold transition-colors duration-200 ${
