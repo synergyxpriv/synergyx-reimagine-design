@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Target, Eye, Star, Handshake } from 'lucide-react';
 import Counter from './Counter';
 
 const AboutSection = () => {
@@ -52,28 +53,28 @@ const AboutSection = () => {
               <div className="grid grid-cols-2 gap-8 w-full max-w-sm">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
-                    <div className="text-2xl">🎯</div>
+                    <Target className="w-8 h-8 text-purple-600" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Mission</h4>
                   <p className="text-sm text-gray-600">Drive innovation</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
-                    <div className="text-2xl">👁️</div>
+                    <Eye className="w-8 h-8 text-purple-600" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Vision</h4>
                   <p className="text-sm text-gray-600">Future focused</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
-                    <div className="text-2xl">⭐</div>
+                    <Star className="w-8 h-8 text-purple-600" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Excellence</h4>
                   <p className="text-sm text-gray-600">Quality first</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg">
-                    <div className="text-2xl">🤝</div>
+                    <Handshake className="w-8 h-8 text-purple-600" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Partnership</h4>
                   <p className="text-sm text-gray-600">Together we grow</p>

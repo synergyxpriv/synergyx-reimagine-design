@@ -5,15 +5,8 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const handleServiceClick = (service: string) => {
-    // Scroll to services section on home page or navigate to services page
-    if (window.location.pathname === '/') {
-      const servicesSection = document.getElementById('services');
-      if (servicesSection) {
-        servicesSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      window.location.href = '/services';
-    }
+    // Navigate to explore our work page
+    window.location.href = '/explore-our-work';
   };
 
   return (
@@ -107,7 +100,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-300 text-sm">
-            © 2024 SynergyX Services. All rights reserved.
+            © 2025 SynergyX Services. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">Privacy Policy</Link>
