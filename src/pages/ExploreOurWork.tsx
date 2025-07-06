@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -78,7 +79,7 @@ const ExploreOurWork = () => {
             Discover the innovative solutions we've delivered for our clients across various industries and technologies.
           </p>
           <div className="mt-8">
-            <Button variant="secondary" className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 hover:text-white font-medium px-6 py-2 transition-all duration-300">
+            <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white">
               <Link to="/services" className="flex items-center gap-2">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Services

@@ -29,7 +29,7 @@ const Navigation = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/20' 
-        : 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/20'
+        : 'bg-gradient-to-r from-purple-900/80 via-indigo-900/80 to-blue-900/80 backdrop-blur-sm'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
@@ -40,7 +40,11 @@ const Navigation = () => {
               alt="SynergyX Services" 
               className="h-8 sm:h-10 w-auto"
             />
-            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <span className={`text-xl sm:text-2xl font-bold transition-colors duration-200 ${
+              isScrolled 
+                ? 'bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent' 
+                : 'text-white'
+            }`}>
               SynergyX Services
             </span>
           </Link>
@@ -53,8 +57,12 @@ const Navigation = () => {
                 to={item.path}
                 className={`text-sm font-medium transition-all duration-200 hover:scale-105 ${
                   location.pathname === item.path 
-                    ? 'text-purple-600 font-semibold' 
-                    : 'text-gray-700 hover:text-purple-600'
+                    ? isScrolled 
+                      ? 'text-purple-600 font-semibold' 
+                      : 'text-purple-200 font-semibold'
+                    : isScrolled 
+                      ? 'text-gray-700 hover:text-purple-600' 
+                      : 'text-white/90 hover:text-purple-200'
                 }`}
               >
                 {item.name}
@@ -71,16 +79,16 @@ const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-700" />
+              <X className={`w-6 h-6 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
             ) : (
-              <Menu className="w-6 h-6 text-gray-700" />
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
+          <div className="lg:hidden mt-4 pb-4 border-t border-white/20">
             <div className="flex flex-col space-y-3 pt-4">
               {navItems.map((item) => (
                 <Link
@@ -88,8 +96,12 @@ const Navigation = () => {
                   to={item.path}
                   className={`text-base font-medium transition-colors duration-200 py-2 px-3 rounded-md ${
                     location.pathname === item.path 
-                      ? 'text-purple-600 bg-purple-50 font-semibold' 
-                      : 'text-gray-700 hover:text-purple-600 hover:bg-gray-50'
+                      ? isScrolled 
+                        ? 'text-purple-600 bg-purple-50 font-semibold' 
+                        : 'text-purple-200 bg-white/10 font-semibold'
+                      : isScrolled 
+                        ? 'text-gray-700 hover:text-purple-600 hover:bg-gray-50' 
+                        : 'text-white/90 hover:text-purple-200 hover:bg-white/10'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

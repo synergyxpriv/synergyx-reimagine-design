@@ -1,40 +1,35 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 
 const ContactCTA = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 relative overflow-hidden">
+    <section className="py-16 sm:py-24 bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-10 w-48 h-48 bg-white rounded-full blur-xl"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-white rounded-full blur-xl"></div>
-      </div>
+      <div className="absolute inset-0 bg-black/10"></div>
+      <div className="absolute top-0 left-0 w-48 sm:w-64 h-48 sm:h-64 bg-white/5 rounded-full blur-3xl -translate-x-24 sm:-translate-x-32 -translate-y-24 sm:-translate-y-32"></div>
+      <div className="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-white/5 rounded-full blur-3xl translate-x-32 sm:translate-x-48 translate-y-32 sm:translate-y-48"></div>
       
-      <div className="container mx-auto px-6 text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Ready to Transform Your <span className="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">Business?</span>
+      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 sm:mb-8 leading-tight px-4">
+          Ready to Transform Your Business?
         </h2>
-        <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Join hundreds of successful companies that have already transformed their operations with our innovative solutions. 
-          Let's discuss how we can help you achieve your digital transformation goals.
+        <p className="text-lg sm:text-xl text-purple-100 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed font-light px-4">
+          Let's discuss how SynergyX Services can help you achieve your digital transformation goals. 
+          Get started with a free consultation today.
         </p>
-        
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <Button size="lg" className="bg-white hover:bg-gray-100 text-purple-900 hover:text-purple-800 text-lg px-10 py-6 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group font-semibold">
-            <Link to="/services" className="flex items-center gap-2">
-              View All Services
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-          <Button variant="outline" size="lg" className="border-2 border-white/70 text-white bg-white/10 hover:bg-white/20 hover:border-white/90 text-lg px-10 py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 group font-semibold">
-            <Link to="/contact" className="flex items-center gap-2">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
+          <Button size="lg" variant="secondary" className="w-full sm:w-auto bg-white text-purple-700 hover:bg-gray-50 text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-2xl shadow-xl hover:shadow-white/10 transition-all duration-300 group">
+            <Link to="/contact" className="flex items-center justify-center gap-2">
+              <MessageCircle className="w-5 h-5" />
               Get Free Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+          </Button>
+          <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-2xl backdrop-blur-sm transition-all duration-300">
+            <Link to="/services">View All Services</Link>
           </Button>
         </div>
       </div>
