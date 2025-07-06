@@ -79,7 +79,7 @@ const ExploreOurWork = () => {
             Discover the innovative solutions we've delivered for our clients across various industries and technologies.
           </p>
           <div className="mt-8">
-            <Button variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 hover:text-white">
+            <Button className="bg-white/20 border-2 border-white/50 text-white hover:bg-white/30 hover:border-white/70 backdrop-blur-sm">
               <Link to="/services" className="flex items-center gap-2">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Services

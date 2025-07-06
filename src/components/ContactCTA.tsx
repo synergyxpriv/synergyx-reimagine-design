@@ -28,7 +28,7 @@ const ContactCTA = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
-          <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-2xl backdrop-blur-sm transition-all duration-300">
+          <Button size="lg" className="w-full sm:w-auto bg-white/20 border-2 border-white/50 text-white hover:bg-white/30 hover:border-white/70 backdrop-blur-sm text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-2xl transition-all duration-300">
             <Link to="/services">View All Services</Link>
           </Button>
         </div>
