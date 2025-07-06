@@ -9,51 +9,61 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          setTimeout(onComplete, 500);
+          setTimeout(onComplete, 800);
           return 100;
         }
-        return prev + 2;
+        return prev + 1.5;
       });
-    }, 50);
+    }, 60);
 
     return () => clearInterval(timer);
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 flex items-center justify-center z-50">
-      <div className="absolute inset-0 bg-black/20"></div>
+    <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 flex items-center justify-center z-50">
+      {/* Animated background orbs */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+      <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
       
-      {/* Floating background elements */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-purple-500/10 rounded-full blur-xl animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-48 h-48 bg-indigo-500/10 rounded-full blur-xl animate-float" style={{animationDelay: '2s'}}></div>
-      <div className="absolute top-1/2 left-10 w-24 h-24 bg-blue-500/10 rounded-full blur-xl animate-float" style={{animationDelay: '4s'}}></div>
-      
-      <div className="text-center animate-fade-in relative z-10">
-        <div className="mb-12">
-          <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-2xl border border-purple-400/30">
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl flex items-center justify-center">
-              <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-md animate-pulse"></div>
+      <div className="text-center relative z-10">
+        {/* Modern logo design */}
+        <div className="mb-12 relative">
+          <div className="w-24 h-24 mx-auto mb-8 relative">
+            {/* Outer rotating ring */}
+            <div className="absolute inset-0 border-4 border-purple-500/30 rounded-full animate-spin" style={{animationDuration: '3s'}}></div>
+            <div className="absolute inset-2 border-2 border-indigo-400/50 rounded-full animate-spin" style={{animationDuration: '2s', animationDirection: 'reverse'}}></div>
+            {/* Inner logo */}
+            <div className="absolute inset-6 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center shadow-2xl">
+              <div className="w-4 h-4 bg-white rounded-sm animate-pulse"></div>
             </div>
           </div>
           
-          <h1 className="text-5xl font-bold text-white mb-4 font-['Plus_Jakarta_Sans'] tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 font-['Plus_Jakarta_Sans'] tracking-tight">
             SynergyX Services
           </h1>
-          <p className="text-purple-200 font-light text-xl tracking-wide">Loading Excellence...</p>
+          <div className="flex items-center justify-center gap-2 text-purple-200">
+            <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-indigo-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+            <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+          </div>
         </div>
         
-        <div className="w-80 max-w-sm mx-auto">
-          <div className="h-3 bg-purple-900/40 rounded-full overflow-hidden backdrop-blur-sm border border-purple-400/30 shadow-lg">
-            <div 
-              className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 rounded-full transition-all duration-300 ease-out shadow-lg animate-pulse"
-              style={{ 
-                width: `${progress}%`,
-                boxShadow: '0 0 20px rgba(168, 85, 247, 0.6)'
-              }}
-            />
-          </div>
-          <div className="mt-6 text-purple-100 text-lg font-medium tracking-wide">
-            {Math.round(progress)}%
+        {/* Modern progress indicator */}
+        <div className="w-72 max-w-sm mx-auto">
+          <div className="relative">
+            <div className="h-1 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm">
+              <div 
+                className="h-full bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 rounded-full transition-all duration-500 ease-out relative"
+                style={{ width: `${progress}%` }}
+              >
+                <div className="absolute right-0 top-0 w-4 h-1 bg-white/50 rounded-full blur-sm"></div>
+              </div>
+            </div>
+            <div className="flex justify-between items-center mt-4">
+              <span className="text-purple-300 text-sm font-medium">Loading...</span>
+              <span className="text-white text-sm font-semibold">{Math.round(progress)}%</span>
+            </div>
           </div>
         </div>
       </div>
