@@ -17,11 +17,11 @@ const AIBanner = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <Sparkles className="w-8 h-8 text-yellow-300" />
+            {/* <Sparkles className="w-8 h-8 text-yellow-300" /> */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
               Transform Your Business with AI
             </h2>
-            <Sparkles className="w-8 h-8 text-yellow-300" />
+            {/* <Sparkles className="w-8 h-8 text-yellow-300" /> */}
           </div>
           
           <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
