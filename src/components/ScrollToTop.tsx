@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 
@@ -6,23 +5,23 @@ const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      // Show button when user scrolls down 100px instead of 300px
+    const handleScroll = () => {
       if (window.pageYOffset > 100) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
-
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', handleScroll);
+    // Check on mount
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
@@ -35,6 +34,7 @@ const ScrollToTop = () => {
       style={{
         boxShadow: '0 4px 20px rgba(168, 85, 247, 0.3)'
       }}
+      aria-label="Scroll to top"
     >
       <ChevronUp size={20} />
     </button>
