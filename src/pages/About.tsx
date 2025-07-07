@@ -17,29 +17,23 @@ import {
 const About = () => {
   const teamMembers = [
     {
-      name: "John Davidson",
+      name: "Muhammad Faizan Siddiqui",
       title: "CEO & Founder",
       bio: "With over 15 years of experience in technology leadership, John founded SynergyX with a vision to help businesses harness the power of digital transformation.",
       expertise: ["Strategic Leadership", "Digital Transformation", "Business Development"]
     },
     {
-      name: "Sarah Mitchell",
+      name: "Shajeer Waqar",
       title: "CTO",
       bio: "Sarah leads our technical strategy with deep expertise in cloud architecture, AI implementation, and enterprise-scale solution design.",
       expertise: ["Cloud Architecture", "AI/ML Solutions", "Enterprise Systems"]
     },
     {
-      name: "Michael Torres",
+      name: "Abdul Tawab Junejo",
       title: "Head of Consulting",
       bio: "Michael brings extensive consulting experience, helping organizations optimize their processes and achieve operational excellence.",
       expertise: ["Business Process Optimization", "Change Management", "Strategic Planning"]
     },
-    {
-      name: "Jennifer Liu",
-      title: "Lead Data Scientist",
-      bio: "Jennifer specializes in turning complex data into actionable insights, leading our analytics and AI integration initiatives.",
-      expertise: ["Data Analytics", "Machine Learning", "Predictive Modeling"]
-    }
   ];
 
   const values = [
