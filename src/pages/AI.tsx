@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { ArrowLeft, Brain, Zap, BarChart3, Shield, Database, MessageSquare, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Brain, Zap, BarChart3, Shield, Database, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -62,46 +62,50 @@ const AI = () => {
     }
   ];
 
-  const tools = [
-    {
-      name: "Make.com",
-      logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=120&h=60&fit=crop"
-    },
-    {
-      name: "n8n.com",
-      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=120&h=60&fit=crop"
-    },
-    {
-      name: "Zapier.com",
-      logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=120&h=60&fit=crop"
-    },
-    {
-      name: "ElevenLabs.com",
-      logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=120&h=60&fit=crop"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 relative overflow-hidden">
-      {/* Technology Pattern Background */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 border border-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 border border-white/20 rounded-lg rotate-45 animate-float"></div>
-        <div className="absolute bottom-40 left-20 w-16 h-16 bg-white/10 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-60 left-1/3 w-20 h-20 border border-white/20 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-60 right-1/3 w-28 h-28 border border-white/20 rounded-lg animate-pulse" style={{animationDelay: '3s'}}></div>
-        <div className="absolute top-80 right-10 w-12 h-12 bg-white/10 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
+      {/* Enhanced Technology Pattern Background */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        {/* Floating geometric shapes */}
+        <div className="absolute top-20 left-10 w-32 h-32 border border-white/30 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 border-2 border-white/25 rounded-lg rotate-45 animate-float"></div>
+        <div className="absolute bottom-40 left-20 w-16 h-16 bg-white/15 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-60 left-1/3 w-20 h-20 border border-white/30 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-60 right-1/3 w-28 h-28 border-2 border-white/25 rounded-lg animate-pulse" style={{animationDelay: '3s'}}></div>
+        <div className="absolute top-80 right-10 w-12 h-12 bg-white/15 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
         
-        {/* Circuit-like patterns */}
+        {/* Additional decorative elements */}
+        <div className="absolute top-1/4 left-1/4 w-6 h-6 bg-purple-400/30 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute top-3/4 right-1/4 w-8 h-8 bg-indigo-400/30 rounded-full animate-float" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-1/4 left-3/4 w-4 h-4 bg-blue-400/30 rounded-full animate-pulse" style={{animationDelay: '2.5s'}}></div>
+        
+        {/* Circuit-like patterns with more complexity */}
         <svg className="absolute top-0 left-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-              <path d="M20 20h60v60h-60z" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
-              <circle cx="50" cy="50" r="3" fill="rgba(255,255,255,0.2)"/>
+              <path d="M20 20h60v60h-60z" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1"/>
+              <circle cx="50" cy="50" r="3" fill="rgba(255,255,255,0.25)"/>
+              <path d="M50 20v15M50 65v15M20 50h15M65 50h15" stroke="rgba(255,255,255,0.2)" strokeWidth="1"/>
+            </pattern>
+            <pattern id="dots" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+              <circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.2)"/>
+            </pattern>
+            <pattern id="grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+              <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#circuit)"/>
+          <rect width="100%" height="100%" fill="url(#dots)" opacity="0.6"/>
+          <rect width="100%" height="100%" fill="url(#grid)" opacity="0.4"/>
         </svg>
+        
+        {/* Diagonal lines and tech patterns */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent transform rotate-12"></div>
+          <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-white/8 to-transparent transform -rotate-12"></div>
+          <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/8 to-transparent"></div>
+          <div className="absolute bottom-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/6 to-transparent"></div>
+        </div>
       </div>
 
       <Navigation />
@@ -206,33 +210,6 @@ const AI = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tools Banner */}
-      <section className="py-16 relative z-10">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 py-12 px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-              Tools We Use
-            </h2>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-              {tools.map((tool, index) => (
-                <div key={index} className="flex flex-col items-center group">
-                  <div className="w-20 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-2 group-hover:bg-white/30 transition-all duration-300">
-                    <img 
-                      src={tool.logo} 
-                      alt={tool.name}
-                      className="w-16 h-8 object-contain opacity-80 group-hover:opacity-100"
-                    />
-                  </div>
-                  <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
-                    {tool.name}
-                  </span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
