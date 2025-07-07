@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
@@ -11,6 +10,7 @@ import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
 import Preloader from '@/components/Preloader';
 import IconScroller from '@/components/IconScroller';
+import AIBanner from '@/components/AIBanner';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +40,7 @@ const Index = () => {
       <div className="relative z-10">
         <Navigation />
         <Hero />
+        <AIBanner />
         <ServicesOverview />
         <AboutSection />
         <BrandScroller />
