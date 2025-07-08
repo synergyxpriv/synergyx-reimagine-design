@@ -8,45 +8,45 @@ import { Link } from 'react-router-dom';
 const ServicesOverview = () => {
   const services = [
     {
-      title: "Digital Transformation",
-      description: "Modernize your business processes with cutting-edge digital solutions that streamline operations and enhance customer experiences.",
+      title: "Business Intelligence",
+      description: "Turn data into actionable insights with customized Power BI dashboards for strategic decision-making.",
       icon: Rocket,
-      features: ["Process Automation", "Legacy System Migration", "Digital Strategy"],
-      gradient: "from-purple-600 to-indigo-600"
+      features: ["Actionable Insights", "Interactive Dashboards", "Data-Driven Decisions"],
+      gradient: "from-purple-600 to-indigo-600",
     },
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services that reduce costs while improving performance and security.",
+      title: "Website Development",
+      description: "Build a powerful online presence with expertly crafted, user-friendly websites designed for your business.",
       icon: Cloud,
-      features: ["Cloud Migration", "Infrastructure Management", "Security & Compliance"],
-      gradient: "from-indigo-600 to-blue-600"
+      features: ["Mobile Responsive Design", "Conversion-Focused Layouts", "Strong Brand Identity"],
+      gradient: "from-indigo-600 to-blue-600",
     },
     {
-      title: "AI Integration",
-      description: "Harness the power of artificial intelligence to automate processes, gain insights, and drive innovation across your organization.",
+      title: "Social Media Management",
+      description: "Boost your brand’s visibility with strategic social media management and engaging content.",
       icon: Brain,
-      features: ["Machine Learning", "Predictive Analytics", "Process Automation"],
-      gradient: "from-blue-600 to-cyan-600"
+      features: ["Audience Engagement", "Consistent Posting", "Brand Awareness Growth"],
+      gradient: "from-blue-600 to-cyan-600",
     },
     {
-      title: "Business Consulting",
-      description: "Strategic guidance and expert consulting to optimize your business operations and achieve sustainable growth.",
+      title: "Paid Ads Marketing",
+      description: "Maximize your reach with targeted paid ads that drive conversions and boost ROI.",
       icon: Briefcase,
-      features: ["Strategic Planning", "Process Optimization", "Change Management"],
+      features: ["Precise Targeting", "Maximized ROI", "Scalable Campaigns"],
       gradient: "from-cyan-600 to-teal-600"
     },
     {
-      title: "Data Analytics",
-      description: "Transform raw data into actionable insights with advanced analytics solutions that drive informed decision-making.",
+      title: "E‑Commerce Store Setup",
+      description: "Streamline your sales with seamless ecommerce store setup and effective management solutions.",
       icon: BarChart3,
-      features: ["Business Intelligence", "Data Visualization", "Predictive Modeling"],
+      features: ["Seamless Checkout", "Smart Inventory", "Increased Online Sales"],
       gradient: "from-teal-600 to-green-600"
     },
     {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance with industry standards.",
+      title: "Graphics Designing",
+      description: "From logos to full-scale marketing materials, we ensure every element communicates your message.",
       icon: Shield,
-      features: ["Threat Assessment", "Security Audits", "Compliance Management"],
+      features: ["Visual Identity", "Brand Consistency", "Creative Impact"],
       gradient: "from-green-600 to-purple-600"
     }
   ];

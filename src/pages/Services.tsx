@@ -10,89 +10,68 @@ import { Rocket, Cloud, Brain, Briefcase, BarChart3, Shield, ArrowRight } from '
 const Services = () => {
   const services = [
     {
-      title: "Digital Transformation",
-      description: "Comprehensive digital modernization strategies that transform your business processes, customer experiences, and operational efficiency.",
+      title: "Business Intelligence",
+      description: "Turn data into actionable insights with customized Power BI dashboards for strategic decision-making.",
       icon: Rocket,
+      features: ["Actionable Insights", "Interactive Dashboards", "Data-Driven Decisions"],
       gradient: "from-purple-600 to-indigo-600",
-      features: [
-        "Legacy System Modernization",
-        "Process Automation & Optimization",
-        "Digital Strategy Development",
-        "Change Management Support",
-        "Technology Roadmap Planning",
-        "Digital Culture Transformation"
-      ]
     },
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure design, migration services, and ongoing management that reduces costs while improving performance and security.",
+      title: "Website Development",
+      description: "Build a powerful online presence with expertly crafted, user-friendly websites designed for your business.",
       icon: Cloud,
+      features: ["Mobile Responsive Design", "Conversion-Focused Layouts", "Strong Brand Identity"],
       gradient: "from-indigo-600 to-blue-600",
-      features: [
-        "Cloud Migration Strategy",
-        "Infrastructure as Code",
-        "Multi-Cloud Architecture",
-        "Cloud Security Implementation",
-        "Cost Optimization",
-        "24/7 Monitoring & Support"
-      ]
     },
     {
-      title: "AI Integration",
-      description: "Advanced artificial intelligence and machine learning solutions that automate processes, provide predictive insights, and drive innovation.",
+      title: "Social Media Management",
+      description: "Boost your brand’s visibility with strategic social media management and engaging content.",
       icon: Brain,
+      features: ["Audience Engagement", "Consistent Posting", "Brand Awareness Growth"],
       gradient: "from-blue-600 to-cyan-600",
-      features: [
-        "Machine Learning Model Development",
-        "Natural Language Processing",
-        "Computer Vision Solutions",
-        "Predictive Analytics",
-        "Process Automation",
-        "AI Strategy Consulting"
-      ]
     },
     {
-      title: "Business Consulting",
-      description: "Strategic guidance and expert consulting services to optimize operations, improve efficiency, and drive sustainable business growth.",
+      title: "Paid Ads Marketing",
+      description: "Maximize your reach with targeted paid ads that drive conversions and boost ROI.",
       icon: Briefcase,
-      gradient: "from-cyan-600 to-teal-600",
-      features: [
-        "Strategic Planning & Roadmapping",
-        "Process Optimization",
-        "Change Management",
-        "Technology Assessment",
-        "Risk Management",
-        "Performance Optimization"
-      ]
+      features: ["Precise Targeting", "Maximized ROI", "Scalable Campaigns"],
+      gradient: "from-blue-600 to-cyan-600",
     },
     {
-      title: "Data Analytics",
-      description: "Transform raw data into actionable business insights with advanced analytics, visualization, and business intelligence solutions.",
+      title: "E‑Commerce Store Setup",
+      description: "Streamline your sales with seamless ecommerce store setup and effective management solutions.",
       icon: BarChart3,
-      gradient: "from-teal-600 to-green-600",
-      features: [
-        "Business Intelligence Platforms",
-        "Data Warehouse Design",
-        "Advanced Analytics",
-        "Real-time Dashboards",
-        "Predictive Modeling",
-        "Data Governance"
-      ]
+      features: ["Seamless Checkout", "Smart Inventory", "Increased Online Sales"],
+      gradient: "from-indigo-600 to-blue-600",
     },
     {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets, ensure compliance, and maintain business continuity.",
+      title: "Graphics Designing",
+      description: "From logos to full-scale marketing materials, we ensure every element communicates your message.",
       icon: Shield,
-      gradient: "from-green-600 to-purple-600",
-      features: [
-        "Security Assessment & Auditing",
-        "Threat Detection & Response",
-        "Compliance Management",
-        "Security Training",
-        "Incident Response Planning",
-        "Continuous Monitoring"
-      ]
-    }
+      features: ["Visual Identity", "Brand Consistency", "Creative Impact"],
+      gradient: "from-purple-600 to-indigo-600",
+    },
+    {
+      title: "Local SEO",
+      description: "Improve local search rankings with expert SEO and efficient Google Business Profile management.",
+      icon: Shield,
+      features: ["Better Local Visibility", "Optimized Listings", "Local Traffic Boost"],
+      gradient: "from-purple-600 to-indigo-600",
+    },
+    {
+      title: "YouTube Optimization",
+      description: "Maximize the reach and impact of your videos by enhancing visibility, keywords, thumbnails, and compelling titles/descriptions.",
+      icon: Shield,
+      features: ["Eye-Catching Thumbnails", "Effective Keywords", "More Organic Views"],
+      gradient: "from-indigo-600 to-blue-600"
+    },
+    {
+      title: "Copy Writing",
+      description: "High-quality copies for blogs, posts, Emails, etc that drive conversions and strengthen your brand voice.",
+      icon: Shield,
+      features: ["Clear Messaging", "Persuasive Content", "Authentic Tone"],
+      gradient: "from-blue-600 to-cyan-600"
+    },
   ];
 
   return (

@@ -12,14 +12,14 @@ const ExploreOurWork = () => {
 
   const projects = [
     {
-      category: "Digital Transformation",
+      category: "Business Intelligence",
       title: "Enterprise Software Modernization",
       description: "Complete legacy system overhaul for a Fortune 500 company, improving efficiency by 40%",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1920&h=1080&fit=crop&crop=center",
       tags: ["Enterprise", "Legacy Migration", "Process Automation"]
     },
     {
-      category: "Cloud Solutions",
+      category: "Website Development",
       title: "Multi-Cloud Infrastructure",
       description: "Scalable cloud architecture supporting 1M+ users with 99.9% uptime",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1920&h=1080&fit=crop&crop=center",
@@ -55,7 +55,7 @@ const ExploreOurWork = () => {
     }
   ];
 
-  const categories = ['All', 'Digital Transformation', 'Cloud Solutions', 'AI Integration', 'Business Consulting', 'Data Analytics', 'Cybersecurity'];
+  const categories = ['All', 'Business Intelligence', 'Website Development', 'Social Media Management', 'Paid Ads Marketing', 'E-Commerce Store Setup', 'Graphic Designing', 'Local SEO', 'YouTube Optimization', 'Copy Writing'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
