@@ -22,8 +22,8 @@ const AIBanner = () => {
           </div>
           
           <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
-            Unlock the power of artificial intelligence to revolutionize your operations, 
-            enhance customer experience, and drive unprecedented growth.
+          Automate processes, unlock insights, and stay ahead of the curve.
+          Future-ready solutions designed for real results.
           </p>
 
           <Button

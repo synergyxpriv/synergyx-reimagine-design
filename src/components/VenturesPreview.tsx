@@ -15,32 +15,25 @@ import {
 const VenturesPreview = () => {
   const featuredVentures = [
     {
-      title: "TechFlow Solutions",
+      title: "SynergyX Academy",
       description: "Revolutionary workflow automation platform transforming business operations.",
       icon: Rocket,
       gradient: "from-purple-600 to-indigo-600",
-      metrics: "10K+ Users"
+      metrics: "100+ Learners"
     },
     {
-      title: "DataVault Analytics", 
+      title: "SynergyX Digital Store", 
       description: "Advanced data intelligence platform with predictive analytics capabilities.",
       icon: TrendingUp,
       gradient: "from-indigo-600 to-blue-600",
-      metrics: "5K+ Users"
+      metrics: "Premium-Quality Digital Products"
     },
     {
-      title: "CloudSecure Pro",
+      title: "SynergyX SkillBuilders",
       description: "Next-generation cybersecurity solution for cloud infrastructure protection.",
       icon: Shield,
       gradient: "from-blue-600 to-cyan-600",
-      metrics: "3K+ Users"
-    },
-    {
-      title: "InnovateLab",
-      description: "R&D incubator fostering breakthrough technologies in AI and quantum computing.",
-      icon: Brain,
-      gradient: "from-cyan-600 to-teal-600",
-      metrics: "15+ Projects"
+      metrics: "Programs & Workshops"
     }
   ];
 

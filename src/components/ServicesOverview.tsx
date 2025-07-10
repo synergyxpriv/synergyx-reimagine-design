@@ -8,46 +8,32 @@ import { Link } from 'react-router-dom';
 const ServicesOverview = () => {
   const services = [
     {
-      title: "Business Intelligence",
-      description: "Turn data into actionable insights with customized Power BI dashboards for strategic decision-making.",
+      title: "Data & Strategy",
+      description: "Empower your business with actionable insights, local SEO visibility, and smart, data-driven strategies.",
       icon: Rocket,
-      features: ["Actionable Insights", "Interactive Dashboards", "Data-Driven Decisions"],
+      features: ["Data insights & dashboards", "Local search visibility", "Data-driven growth"],
       gradient: "from-purple-600 to-indigo-600",
     },
     {
-      title: "Website Development",
-      description: "Build a powerful online presence with expertly crafted, user-friendly websites designed for your business.",
+      title: "Digital Presence",
+      description: "Build responsive websites and seamless online stores that boost your brand and drive more conversions.",
       icon: Cloud,
-      features: ["Mobile Responsive Design", "Conversion-Focused Layouts", "Strong Brand Identity"],
+      features: ["Responsive, brand-aligned websites", "Seamless online stores with optimized checkout", " Improved conversion performance"],
       gradient: "from-indigo-600 to-blue-600",
     },
     {
-      title: "Social Media Management",
-      description: "Boost your brand’s visibility with strategic social media management and engaging content.",
+      title: "Marketing & Engagement",
+      description: "Grow your audience with strategic social media management and ROI-focused paid advertising campaigns.",
       icon: Brain,
-      features: ["Audience Engagement", "Consistent Posting", "Brand Awareness Growth"],
+      features: ["Consistent audience engagement", "Targeted ad campaigns with high ROI", "Brand reach and awareness growth"],
       gradient: "from-blue-600 to-cyan-600",
     },
     {
-      title: "Paid Ads Marketing",
-      description: "Maximize your reach with targeted paid ads that drive conversions and boost ROI.",
+      title: "Content & Media",
+      description: "Elevate your brand with optimized videos, compelling visuals, and persuasive copy that resonates.",
       icon: Briefcase,
-      features: ["Precise Targeting", "Maximized ROI", "Scalable Campaigns"],
+      features: ["Optimized video thumbnails, titles & descriptions", "Visually compelling branding & materials", "Clear, persuasive messaging"],
       gradient: "from-cyan-600 to-teal-600"
-    },
-    {
-      title: "E‑Commerce Store Setup",
-      description: "Streamline your sales with seamless ecommerce store setup and effective management solutions.",
-      icon: BarChart3,
-      features: ["Seamless Checkout", "Smart Inventory", "Increased Online Sales"],
-      gradient: "from-teal-600 to-green-600"
-    },
-    {
-      title: "Graphics Designing",
-      description: "From logos to full-scale marketing materials, we ensure every element communicates your message.",
-      icon: Shield,
-      features: ["Visual Identity", "Brand Consistency", "Creative Impact"],
-      gradient: "from-green-600 to-purple-600"
     }
   ];
 

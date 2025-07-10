@@ -1,19 +1,14 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import Counter from './Counter';
 import { Target, Eye, Star, Handshake } from 'lucide-react';
 
 const AboutSection = () => {
-  const stats = [
-    { number: "150+", label: "Happy Clients" },
-    { number: "10+", label: "Years Experience" }
-  ];
-
   const counterStats = [
-    { end: 500, suffix: "+", label: "Projects Completed" },
-    { end: 98, suffix: "%", label: "Client Satisfaction" },
-    { label: "24/7", staticValue: "24/7", description: "Support Available" }
+    { end: 50, suffix: '+', label: 'Projects Completed' },
+    { end: 100, suffix: '%', label: 'Client Commitment' },
+    { end: 5, suffix: '+', label: 'Experience' },
+    { staticValue: '24/7', label: 'Support Available' }
   ];
 
   return (
@@ -25,27 +20,11 @@ const AboutSection = () => {
               About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">SynergyX</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Founded with a vision to bridge the gap between technology and business success, 
-              SynergyX Services has been at the forefront of digital transformation for over a decade.
+            SynergyX Services was founded to connect technology with real business growth. For the past years, we've led the way in digital transformation. 
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              We specialize in delivering innovative solutions that empower businesses to thrive 
-              in an increasingly digital world. Our team of experts combines deep technical knowledge 
-              with strategic business insight to deliver results that matter.
+            We create smart solutions that help businesses succeed in today's digital landscape. Our team blends technical expertise with practical business insight to deliver results that make a difference.
             </p>
-
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <Card key={index} className="text-center border-0 shadow-sm">
-                  <CardContent className="p-6">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm text-gray-600">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
 
           <div className="relative">
@@ -93,11 +72,11 @@ const AboutSection = () => {
                   {stat.staticValue ? (
                     stat.staticValue
                   ) : (
-                    <Counter end={stat.end!} suffix={stat.suffix} />
+                    <Counter end={stat.end} suffix={stat.suffix} />
                   )}
                 </div>
                 <div className="text-sm sm:text-base text-gray-600 uppercase tracking-wider">
-                  {stat.description || stat.label}
+                  {stat.label}
                 </div>
               </div>
             ))}

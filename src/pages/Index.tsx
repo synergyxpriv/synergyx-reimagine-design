@@ -43,7 +43,7 @@ const Index = () => {
         <AIBanner />
         <ServicesOverview />
         <AboutSection />
-        <BrandScroller />
+        {/* <BrandScroller /> */}
         <IconScroller />
         <VenturesPreview />
         <Testimonials />

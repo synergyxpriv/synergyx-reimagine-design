@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center max-w-5xl mx-auto">          
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 animate-fade-in leading-tight">
-            Transform Your Business
+          Grow with SynergyX
             <span className="block mt-2 min-h-[1.2em]">
               <TextRotator 
                 texts={rotatingTexts} 
@@ -45,8 +45,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed animate-fade-in max-w-3xl mx-auto font-light px-4" style={{animationDelay: '0.2s'}}>
-            Empowering enterprises through cutting-edge technology, strategic innovation, 
-            and comprehensive digital transformation services that drive measurable results.
+          Empowering businesses with advanced technology, strategic innovation, and complete digital transformation solutions that deliver clear, measurable results.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in px-4" style={{animationDelay: '0.4s'}}>
@@ -59,7 +58,7 @@ const Hero = () => {
             <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-white/70 text-white bg-white/10 hover:bg-white/20 hover:border-white/90 text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 group font-semibold">
               <Link to="/contact" className="flex items-center justify-center gap-2">
                 <Play className="w-5 h-5" />
-                Free Consultation
+                Book a Consultation
               </Link>
             </Button>
           </div>
